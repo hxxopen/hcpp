@@ -1,0 +1,7 @@
+{
+  "id": "CH-003",
+  "mediaType": "text/plain",
+  "encoding": "utf-8",
+  "canonicalization": "bom-strip+lf-normalize",
+  "description": "Same logical text as CH-001, but with CRLF (\\r\\n) newlines. After LF normalization, hash must equal CH-001."
+}

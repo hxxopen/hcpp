@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hxxopen.github.io/hcpp/schema/publisher.schema.json",
+  "title": "HCPP Publisher",
+  "description": "HCPP v0.1 Publisher schema. Experimental.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "publicKey",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Publisher identifier, e.g. hxx:publisher:hxxnewsletter",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable publisher name",
+      "minLength": 1
+    },
+    "publicKey": {
+      "type": "object",
+      "required": ["algorithm", "keyId", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["Ed25519"]
+        },
+        "keyId": {
+          "type": "string",
+          "description": "Key identifier, e.g. hxx:key:publisher:01",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "description": "Public key encoding (implementation-defined, commonly base64 or base64url)"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "revoked", "suspended"],
+      "default": "active"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "CH-004",
+  "mediaType": "text/plain",
+  "encoding": "utf-8",
+  "canonicalization": "bom-strip+lf-normalize",
+  "description": "Mixed newline styles: CR, CRLF, and LF in one file. All must normalize to LF before hashing."
+}

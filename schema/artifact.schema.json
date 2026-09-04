@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hxxopen.github.io/hcpp/schema/artifact.schema.json",
+  "title": "HCPP Artifact",
+  "description": "HCPP v0.1 Artifact summary schema (as returned by Registry). Experimental.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "publisherId",
+    "status",
+    "createdAt"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "HCPP Object Identifier",
+      "pattern": "^HXX-[A-Z]{2,8}-[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "article",
+        "report",
+        "document",
+        "pdf",
+        "image",
+        "video",
+        "audio",
+        "dataset",
+        "webpage",
+        "source",
+        "other"
+      ]
+    },
+    "publisherId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "superseded", "revoked", "withdrawn"]
+    },
+    "currentRevision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "publishedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

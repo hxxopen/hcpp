@@ -1,0 +1,7 @@
+{
+  "id": "CH-005",
+  "mediaType": "text/plain",
+  "encoding": "utf-8",
+  "canonicalization": "bom-strip+lf-normalize",
+  "description": "Empty content. SHA-256 of empty bytes."
+}

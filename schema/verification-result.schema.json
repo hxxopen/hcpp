@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hxxopen.github.io/hcpp/schema/verification-result.schema.json",
+  "title": "HCPP Verification Result",
+  "description": "HCPP v0.1 Verification Result schema. Experimental.",
+  "type": "object",
+  "required": [
+    "valid",
+    "contentMatched",
+    "signatureValid",
+    "publisherValid"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "valid": {
+      "type": "boolean",
+      "description": "Overall verification result"
+    },
+    "contentMatched": {
+      "type": "boolean",
+      "description": "Whether the provided content hash matches the registered content hash"
+    },
+    "metadataMatched": {
+      "type": "boolean",
+      "description": "Whether the metadata hash matches (if metadata hash is used)"
+    },
+    "signatureValid": {
+      "type": "boolean",
+      "description": "Whether the digital signature is valid"
+    },
+    "publisherValid": {
+      "type": "boolean",
+      "description": "Whether the publisher exists and is in a valid state for verification"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "superseded", "revoked", "withdrawn"],
+      "description": "Current status of the artifact"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Relevant timestamp (usually publishedAt or registry received time)"
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "message"],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "description": "Additional implementation-specific details",
+      "additionalProperties": true
+    }
+  }
+}

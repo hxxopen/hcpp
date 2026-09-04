@@ -1,0 +1,7 @@
+{
+  "id": "CH-008",
+  "mediaType": "application/json",
+  "encoding": "utf-8",
+  "canonicalization": "bom-strip+lf-normalize",
+  "description": "JSON treated as ordinary text for Content Hash. Do NOT apply JCS. Only BOM strip + LF newline normalization. (JCS is for signature/canonical JSON paths, not this content-hash case.)"
+}

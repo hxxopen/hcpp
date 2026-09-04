@@ -1,0 +1,6 @@
+{
+  "id": "CH-007",
+  "mediaType": "image/png",
+  "canonicalization": "none",
+  "description": "Minimal 1x1 PNG binary. Hash raw bytes with no modification (no BOM strip, no newline normalization)."
+}

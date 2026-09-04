@@ -1,0 +1,7 @@
+{
+  "id": "CH-001",
+  "mediaType": "text/plain",
+  "encoding": "utf-8",
+  "canonicalization": "bom-strip+lf-normalize",
+  "description": "Plain UTF-8 text with LF newlines only, no BOM. Baseline case."
+}

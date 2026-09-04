@@ -1,0 +1,7 @@
+{
+  "id": "CH-006",
+  "mediaType": "text/plain",
+  "encoding": "utf-8",
+  "canonicalization": "bom-strip+lf-normalize",
+  "description": "Leading and trailing spaces/tabs must be preserved. No trim and no whitespace folding."
+}

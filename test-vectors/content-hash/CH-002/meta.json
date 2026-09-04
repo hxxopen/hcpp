@@ -1,0 +1,7 @@
+{
+  "id": "CH-002",
+  "mediaType": "text/plain",
+  "encoding": "utf-8",
+  "canonicalization": "bom-strip+lf-normalize",
+  "description": "Same logical text as CH-001, but prefixed with UTF-8 BOM (EF BB BF). After BOM strip, hash must equal CH-001."
+}
